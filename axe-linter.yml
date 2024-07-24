@@ -1,0 +1,8 @@
+exclude:
+  - "node_modules/**/*.html"
+  - "./reporters/*.html"
+
+tags:
+  - wcag21a
+  - wcag21aa
+  - best-practices

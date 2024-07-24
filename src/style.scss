@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*, *::before, *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   // Colors - Light Theme
+   --color-primary: hsl(172, 67%, 45%);
+   --color-secondary: hsl(183, 100%, 15%);
+   --color-accent-dark-1: hsl(186, 14%, 43%);
+   --color-accent-dark-2: hsl(184, 14%, 56%);
+   --color-accent-dark-3: hsl(184, 19%, 68%);
+   --color-accent-dark-4: hsl(180, 18%, 40%);
+   --color-accent-dark-5: hsl(180, 25%, 32%);
+   --color-accent-light-1: hsl(185, 41%, 84%);
+   --color-accent-light-2: hsl(189, 41%, 97%);
+   --color-accent-light-3: hsl(0, 0%, 100%);
+   --color-accent-light-4: hsl(173, 61%, 77%);
+   --error-color: hsl(13, 70%, 61);
+
+   // Colors - Dark Theme
+   --dt-color-primary: hsl(172, 67%, 31%);
+   --dt-color-secondary: hsl(183, 100%, 10%);
+   --dt-color-accent-dark-1: hsl(185, 41%, 21%);
+   --dt-color-accent-dark-2: hsl(186, 14%, 43%);
+   --dt-color-accent-dark-3: hsl(180, 18%, 40%);
+   --dt-color-accent-dark-4: hsl(0, 0%, 5%);
+   --dt-color-accent-dark-5: hsl(0, 0%, 12%);
+   --dt-color-accent-light-1: hsl(184, 19%, 68%);
+   --dt-color-accent-light-2: hsl(183, 100%, 85%);
+   --dt-color-accent-light-3: hsl(183, 100%, 95%);
+   --dt-color-accent-light-4: hsl(189, 41%, 47%);
+   --dt-color-accent-light-5: hsl(173, 61%, 77%);
+   --dt-error-color: hsl(13, 70%, 61);
+
+   // Fonts
+   --font-primary: "Space Mono", monospace;
+   --font-secondary: "Inter";
+
+   // Sizes
+   --xsmall: 1rem;
+   --small: 3rem;
+   --medium: 6rem;
+   --large: 9rem;
+   --xlarge: 12rem;
+   --xxlarge: 18rem;
+   --maxwidth: 87.5rem;
+
+   // Spacing
+   --half: 0.5rem;
+   --space-1: 1rem;
+   --space-1-5: 1.5rem;
+   --space-2: 2rem;
+   --space-2-5: 2.5rem;
+   --space-3: 3rem;
+   --space-3-5: 3.5rem;
+   --space-4: 4rem;
+   --space-4-5: 4.5rem;
+   --space-5: 5rem;
+   --space-5-5: 5.5rem;
+   --space-6: 6rem;
+
+   // Radius
+   --radius-2: 0.125rem;
+   --radius-4: 0.25rem;
+   --radius-8: 0.5rem;
+   --radius-16: 1rem;
+   --radius-24: 1.5rem;
+   --radius-round: 50%;
+
+   // Transitions
+   --transition-1: all 300ms ease-in-out, border 1ms;
+
+   // Input padding
+   --input-padding: 0.375rem 1rem;
+
+
+   // UI variables - Light Theme
+
+}
+
+* {
+   transition: var(--transition-1);
+}
+
+@mixin flex-column {
+   display: flex;
+   flex-direction: column;
+}
+
+@mixin flex-column-center {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin flex-row {
+   display: flex;
+   flex-direction: row;
+}
+
+@mixin flex-row-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin flex-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin flex-align-center {
+   display: flex;
+   align-items: center;
+}
+
+@mixin flex-justify-center {
+   display: flex;
+   justify-content: center;
+}
+
+.dark-theme {
+   // UI variables - Dark Theme
+
+}
+
+.container {
+   @include flex-column-center;
+   min-height: 100vh;
+   gap: var(--space-2-5);
+   margin-top: var(--space-3);
+}
+
+body {
+   background-color: var(--bg-body);
+   font-family: var(--font-primary);
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--space-4);
+}
+
+.theme-toggle {
+   cursor: pointer;
+}
+
+.main {
+   @include flex-row-center;
+   gap: var(--space-2);
+   width: min(100vw - 2rem, 57.5rem);
+   min-height: 40vh;
+   margin-inline: auto;
+   background-color: var(--bg-main);
+   border-radius: var(--radius-24);
+   padding: var(--space-2);
+   margin-bottom: var(--space-3);
+}
+
+input {
+   text-align: right;
+   border: none;
+   outline: none;
+   background-color: var(--bg-input);
+   border-radius: var(--radius-4);
+   caret-color: var(--cursor-color);
+   color: var(--input-text-color);
+   font-family: var(--font-primary);
+}
+
+input::placeholder {
+   font-family: var(--font-primary);
+   color: var(--placeholder);
+}
+
+input:focus {
+   border: 2px solid var(--input-focus-border);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.input-wrapper {
+   @include flex-align-center;
+   position: relative;
+}
+
+.input-wrapper img {
+   position: absolute;
+   left: 1rem;
+   fill: var(--input-icon-color);
+}
+
+
+@media (width < 55rem) {
+   .main {
+      flex-direction: column;
+      gap: var(--space-4);
+      width: min(100vw, 37.5rem);
+   }
+}
+
+@media (width < 37.5rem) {
+
+}
