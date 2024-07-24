@@ -1,0 +1,22 @@
+{
+  "name": "frontend-mentor-solution-template",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pa11y:dev": "node ./pa11y.lint.dev.js"
+  },
+  "devDependencies": {
+    "chalk": "latest",
+    "open-props": "latest",
+    "pa11y": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "postcss-jit-props": "latest",
+    "postcss-preset-env": "latest",
+    "sass": "latest",
+    "vite": "latest"
+  }
+}
