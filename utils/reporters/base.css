@@ -60,10 +60,29 @@ pre {
 }
 
 .result {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #eee;
 }
+
+.li__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.result:has(.li__checkbox > input[type="checkbox"]:checked) > .li__content {
+  text-decoration: line-through;
+}
+
 .error {
   background-color: #fdd;
   border-color: #ff9696;
