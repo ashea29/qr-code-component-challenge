@@ -3,5 +3,5 @@
   "includeNotices": true,
   "includeWarnings": true,
   "level": "warning",
-  "reporter": "reporters/html-custom.js"
+  "reporter": "utils/reporters/html-custom.js"
 }
