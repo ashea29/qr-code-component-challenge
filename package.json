@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "pa11y:dev": "node ./utils/pa11y.lint.dev.js"
+    "pa11y:dev": "node ./utils/pa11y.dev.js"
   },
   "devDependencies": {
     "chalk": "latest",

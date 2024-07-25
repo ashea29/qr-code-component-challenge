@@ -21,9 +21,15 @@
 		<ul class="clean-list results-list">
 			{{#issues}}
 			<li class="result {{type}}">
-				<h2>{{typeLabel}}: {{message}}</h2>
-				<p>{{code}}</p>
-				<pre>{{context}} (select with "{{selector}}")</pre>
+				<div class="li__content">
+					<h2>{{typeLabel}}: {{message}}</h2>
+					<p>{{code}}</p>
+					<pre>{{context}} (select with "{{selector}}")</pre>
+				</div>
+				<div class="li__checkbox">
+					<label for="completed-checkbox">Addressed?</label>
+					<input id="completed-checkbox" name="completed-checkbox" type="checkbox" />
+				</div>
 			</li>
 			{{/issues}}
 		</ul>
