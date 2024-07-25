@@ -3,7 +3,7 @@
 const fs = require('fs');
 const mustache = require('mustache');
 const path = require('path');
-const {promisify} = require('util');
+const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
 
 const report = module.exports = {};
@@ -13,10 +13,11 @@ report.supports = '^8.0.0 || ^8.0.0-alpha || ^8.0.0-beta';
 
 // Compile template and output formatted results
 report.results = async results => {
-	const templateString = await readFile(path.resolve(`${__dirname}/report.html`), 'utf-8');
+	const templateString = await readFile(path.resolve(`${__dirname}/base.html`), 'utf-8');
+
 	return mustache.render(templateString, {
 		// The current date
-		date: new Date(),
+		date: new Date().toLocaleString(),
 
 		// Result information
 		documentTitle: results.documentTitle,
@@ -29,8 +30,7 @@ report.results = async results => {
 		// Issue counts
 		errorCount: results.issues.filter(issue => issue.type === 'error').length,
 		warningCount: results.issues.filter(issue => issue.type === 'warning').length,
-		noticeCount: results.issues.filter(issue => issue.type === 'notice').length
-
+		noticeCount: results.issues.filter(issue => issue.type === 'notice').length,
 	});
 };
 

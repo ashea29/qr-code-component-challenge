@@ -25,3 +25,5 @@ dist-ssr
 
 # Other
 pa11y-results.html
+pa11y-results
+pa11y-results/*.html
