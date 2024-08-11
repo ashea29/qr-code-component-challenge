@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 
 *, *::before, *::after {
@@ -9,37 +9,17 @@
 
 :root {
    // Colors - Light Theme
-   --color-primary: hsl(172, 67%, 45%);
-   --color-secondary: hsl(183, 100%, 15%);
-   --color-accent-dark-1: hsl(186, 14%, 43%);
-   --color-accent-dark-2: hsl(184, 14%, 56%);
-   --color-accent-dark-3: hsl(184, 19%, 68%);
-   --color-accent-dark-4: hsl(180, 18%, 40%);
-   --color-accent-dark-5: hsl(180, 25%, 32%);
-   --color-accent-light-1: hsl(185, 41%, 84%);
-   --color-accent-light-2: hsl(189, 41%, 97%);
-   --color-accent-light-3: hsl(0, 0%, 100%);
-   --color-accent-light-4: hsl(173, 61%, 77%);
-   --error-color: hsl(13, 70%, 61);
+   --bg-body: hsl(212, 45%, 89%);
+   --bg-card: hsl(0, 0%, 100%);
+   --color-primary: hsl(216, 95%, 58%);
 
    // Colors - Dark Theme
-   --dt-color-primary: hsl(172, 67%, 31%);
-   --dt-color-secondary: hsl(183, 100%, 10%);
-   --dt-color-accent-dark-1: hsl(185, 41%, 21%);
-   --dt-color-accent-dark-2: hsl(186, 14%, 43%);
-   --dt-color-accent-dark-3: hsl(180, 18%, 40%);
-   --dt-color-accent-dark-4: hsl(0, 0%, 5%);
-   --dt-color-accent-dark-5: hsl(0, 0%, 12%);
-   --dt-color-accent-light-1: hsl(184, 19%, 68%);
-   --dt-color-accent-light-2: hsl(183, 100%, 85%);
-   --dt-color-accent-light-3: hsl(183, 100%, 95%);
-   --dt-color-accent-light-4: hsl(189, 41%, 47%);
-   --dt-color-accent-light-5: hsl(173, 61%, 77%);
-   --dt-error-color: hsl(13, 70%, 61);
+   --dt-bg-body: hsl(213, 43%, 4%);
+   --dt-bg-card: hsl(0, 0%, 13%);
+   --dt-color-primary: hsl(216, 96%, 63%);
 
    // Fonts
-   --font-primary: "Space Mono", monospace;
-   --font-secondary: "Inter";
+   --font-primary: "Outfit", sans-serif;
 
    // Sizes
    --xsmall: 1rem;
@@ -73,7 +53,7 @@
    --radius-round: 50%;
 
    // Transitions
-   --transition-1: all 300ms ease-in-out, border 1ms;
+   --transition-1: all 300ms ease-in-out;
 
    // Input padding
    --input-padding: 0.375rem 1rem;
@@ -143,13 +123,6 @@ body {
    font-family: var(--font-primary);
 }
 
-.header {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: var(--space-4);
-}
-
 .theme-toggle {
    cursor: pointer;
 }
@@ -166,47 +139,17 @@ body {
    margin-bottom: var(--space-3);
 }
 
-input {
-   text-align: right;
-   border: none;
-   outline: none;
-   background-color: var(--bg-input);
-   border-radius: var(--radius-4);
-   caret-color: var(--cursor-color);
-   color: var(--input-text-color);
-   font-family: var(--font-primary);
-}
-
-input::placeholder {
-   font-family: var(--font-primary);
-   color: var(--placeholder);
-}
-
-input:focus {
-   border: 2px solid var(--input-focus-border);
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number]{
-   -moz-appearance: textfield;
-   appearance: textfield;
-}
-
-.input-wrapper {
-   @include flex-align-center;
-   position: relative;
-}
-
-.input-wrapper img {
+.sr-only {
    position: absolute;
-   left: 1rem;
-   fill: var(--input-icon-color);
-}
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border-width: 0;
+ }
 
 
 @media (width < 55rem) {

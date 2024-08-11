@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tip Calculator</title>
+    <title>QR Code Component</title>
     <link rel="stylesheet" href="style.scss">
   </head>
   <body>
+    <h1 class="sr-only">QR Code Component - Frontent Mentor Challenge</h1>
     <div class="container">
-      <header class="header">
-        <div class="theme-toggle">
-          <img src="./images/light-theme-icon.svg" alt="Theme toggle">
-        </div>
-      </header>
       <main class="main">
-        <section >
-          <h1>Frontend Mentor - Solution Template</h1>
-        </section>
+        <article class="card">
+          <div class="card__qr">
+            <div class="card__qr__oval--top-left"></div>
+            <div class="card__qr__oval--bottom-right"></div>
+            <img class="card__qr__qr-code" src="qr0.svg" />
+          </div>
+          <div class="card__body">
+            <h2 class="card__body__heading">
+              Improve your front-end skills by building projects
+            </h2>
+            <p class="card__body__subheading">
+              Scan the QR code to visit Frontend Mentor and take your coding skills to
+              the next level
+            </p>
+          </div>
+        </article>
       </main>
     </div>
     
