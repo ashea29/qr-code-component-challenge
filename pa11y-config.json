@@ -1,7 +1,0 @@
-{
-  "standard": "WCAG2AA",
-  "includeNotices": true,
-  "includeWarnings": true,
-  "level": "warning",
-  "reporter": "utils/reporters/html-custom.js"
-}
