@@ -12,11 +12,8 @@
    --bg-body: hsl(212, 45%, 89%);
    --bg-card: hsl(0, 0%, 100%);
    --color-primary: hsl(216, 95%, 58%);
-
-   // Colors - Dark Theme
-   --dt-bg-body: hsl(213, 43%, 4%);
-   --dt-bg-card: hsl(0, 0%, 13%);
-   --dt-color-primary: hsl(216, 96%, 63%);
+   --text-color-primary: hsl(216, 15%, 48%);
+   --text-color-heading: hsl(218, 44%, 22%);
 
    // Fonts
    --font-primary: "Outfit", sans-serif;
@@ -107,24 +104,23 @@
 }
 
 .dark-theme {
-   // UI variables - Dark Theme
-
+   --bg-body: hsl(213, 43%, 4%);
+   --bg-card: hsl(0, 0%, 13%);
+   --color-primary: hsl(216, 96%, 63%);
+   --text-color-primary: hsl(216, 15%, 60%);
+   --text-color-heading: hsl(218, 43%, 73%);
 }
 
 .container {
    @include flex-column-center;
    min-height: 100vh;
    gap: var(--space-2-5);
-   margin-top: var(--space-3);
 }
 
 body {
    background-color: var(--bg-body);
    font-family: var(--font-primary);
-}
-
-.theme-toggle {
-   cursor: pointer;
+   position: relative;
 }
 
 .main {
@@ -149,8 +145,49 @@ body {
    clip: rect(0, 0, 0, 0);
    white-space: nowrap;
    border-width: 0;
- }
+}
 
+.theme-toggle-btn {
+   @include flex-row-center;
+   gap: var(--space-1);
+   background-color: var(--color-primary);
+   padding: var(--space-1);
+   border-radius: var(--radius-16);
+   border: none;
+   color: var(--bg-card);
+   font-weight: 700;
+   font-size: var(--xsmall);
+   line-height: var(--xsmall);
+   cursor: pointer;
+   position: absolute;
+   top: 2rem;
+   right: 2rem;
+   width: 170px;
+   transition: none;
+
+   & > * {
+      transition: none;
+   }
+}
+
+.theme-toggle__icon {
+   width: 1.15rem;
+   height: 1.15rem;
+   stroke: var(--bg-card);
+}
+
+.card {}
+
+.card__qr__qr-code {}
+
+
+.card__body__heading {
+   color: var(--text-color-heading);
+}
+
+.card__body__subheading {
+   color: var(--text-color-primary);
+}
 
 @media (width < 55rem) {
    .main {
