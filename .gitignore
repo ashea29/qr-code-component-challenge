@@ -27,3 +27,4 @@ dist-ssr
 pa11y-results.html
 pa11y-results
 pa11y-results/*.html
+.env

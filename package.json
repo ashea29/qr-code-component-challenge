@@ -6,9 +6,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "pa11y:dev": "node ./utils/pa11y.dev.js"
+    "ngrok": "node ./utils/ngrok.cjs",
+    "pa11y": "node ./utils/pa11y.dev.js"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.7.0",
+    "@ngrok/ngrok": "^1.4.1",
     "chalk": "latest",
     "open-props": "latest",
     "pa11y": "latest",
