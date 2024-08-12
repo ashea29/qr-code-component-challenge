@@ -1,37 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR Code Component</title>
-    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.scss" />
   </head>
   <body>
     <h1 class="sr-only">QR Code Component - Frontent Mentor Challenge</h1>
-    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
-      <img class="theme-toggle__icon" id="dark-theme-icon" src="images/light-theme-icon.svg" alt="Light Theme Icon" />
-      <span>Light Theme</span>
+    <button
+      class="theme-toggle-btn"
+      id="theme-toggle"
+      aria-label="Toggle Theme"
+    >
+      <img
+        class="theme-toggle__icon"
+        id="theme-icon"
+        src="images/dark-theme-icon.svg"
+        alt="Light Theme Icon"
+      />
+      <span class="sr-only">Switch to dark theme</span>
     </button>
     <div class="container">
       <main class="main">
         <article class="card">
           <div class="card__qr">
-            <img class="card__qr__qr-code" src="images/image-qr-code.png" alt="QR Code" />
+            <img
+              id="qr-code"
+              class="card__qr__qr-code"
+              src="images/image-qr-code-light.png"
+              alt="QR Code"
+            />
           </div>
           <div class="card__body">
             <h2 class="card__body__heading">
               Improve your front-end skills by building projects
             </h2>
             <p class="card__body__subheading">
-              Scan the QR code to visit Frontend Mentor and take your coding skills to
-              the next level
+              Scan the QR code to visit Frontend Mentor and take your coding
+              skills to the next level
             </p>
           </div>
         </article>
       </main>
     </div>
-    
+
     <script type="module" src="script.js"></script>
   </body>
 </html>
