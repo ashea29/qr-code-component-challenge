@@ -33,7 +33,7 @@ As an added challenge, I decided to create a theme toggle for this project. I ad
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/ashea29/qr-code-component-challenge)
-- Live Preview URL: [https://ashea29.github.io/qr-code-component-challenge](https://ashea29.github.io/qr-code-component-challenge/)
+- Live Preview URL: [https://qr-code-component-solution-ajs.netlify.app/](https://qr-code-component-solution-ajs.netlify.app/)
 
 ## My process
 
