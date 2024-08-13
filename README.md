@@ -1,6 +1,6 @@
 # Frontend Mentor - Solution Template
 
-This is my solution to the [[NAME] challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is my solution to the [QR Code Component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -17,11 +17,7 @@ This is my solution to the [[NAME] challenge on Frontend Mentor](https://www.fro
 
 ### The challenge
 
-Users should be able to:
-
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+The task in this challenge was to build out a QR code component and get it looking as close to the design as possible.
 
 ### Screenshot
 As an added challenge, I decided to create a theme toggle for this project. I added a separate set of color variables closely related to those for the default theme, and a button to switch between themes:
@@ -36,8 +32,8 @@ As an added challenge, I decided to create a theme toggle for this project. I ad
 
 ### Links
 
-- Solution URL: [GitHub repo](https://your-solution-url.com)
-- Live Site URL: [https://tip-calculator-solution-ajs.netlify.app/](https://tip-calculator-solution-ajs.netlify.app/)
+- Solution URL: [GitHub repo](https://github.com/ashea29/qr-code-component-challenge)
+- Live Preview URL: [https://ashea29.github.io/qr-code-component-challenge](https://ashea29.github.io/qr-code-component-challenge/)
 
 ## My process
 
@@ -47,13 +43,14 @@ As an added challenge, I decided to create a theme toggle for this project. I ad
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Sass mixins
 
-### What I learned
-In this challenge, I was able to get some more practice (always a good thing!) writing semantic HTML, as well as using the BEM naming convention for CSS classes.
+As another added challenge, even though it's blatant overkill for such a simple component, I took the opportunity to build an accessibility checker into my workflow using [pa11y](https://github.com/pa11y/pa11y) and [concurrently](https://github.com/open-cli-tools/concurrently). The intention is to use this, going forward, in future challenges and other projects.
 
-Additionally, I was able to solidify a strategy I intend to use, going forward, for creating a maintainable light-theme/dark-theme toggle.
+### What I learned
+I recently started going through Frontend Mentor's formal learning path in order to get extra practice, solidify concepts and techniques I'm already familiar with, and to learn some new things too! This challenge fell under the category: "review of the skills I already have."
+
+However, I did learn some new things along the way -- mostly from building the accessibility checker. It took some trial and error to get things working properly, and in a way that made sense.
 
 ## Author
 
