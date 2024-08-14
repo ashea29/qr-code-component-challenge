@@ -2,7 +2,7 @@
 
 exclude:
   - "node_modules/**/*.html"
-  - "./utils/**/reporters/*.html"
+  - "./utils/**/**/*.html"
 
 tags:
   - wcag21a
