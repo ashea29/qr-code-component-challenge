@@ -73,7 +73,7 @@
   flex-direction: row;
 }
 
-@mixin flex-center {
+@mixin flex-row-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +110,7 @@ body {
 }
 
 .main {
-  @include flex-center;
+  @include flex-row-center;
   gap: var(--space-2);
   width: min(100vw - 2rem, 57.5rem);
   min-height: 100%;
@@ -134,7 +134,7 @@ body {
 }
 
 .theme-toggle-btn {
-  @include flex-center;
+  @include flex-row-center;
   gap: var(--space-1);
   background-color: var(--color-primary);
   padding: var(--space-1);
